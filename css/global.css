@@ -39,6 +39,11 @@ html {
   );
 }
 
+::-webkit-scrollbar{
+  background: #000;
+  width: 10px;
+}
+
 a {
   text-decoration: underline dashed;
   font-style: bold;

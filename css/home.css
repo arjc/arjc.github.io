@@ -9,20 +9,20 @@
     font-display: inherit;
     height: 100vh;
     width: 100vw;
-    font-size: clamp(10em, 20vw, 40vw);
+    font-size: clamp(1em, 20vw, 40vw);
     font-weight: 900;
-    scale: 1.25 3;
+    scale: 1.65 3.5;
 }
 #arjun-title span{
     transform: translateY(-100vh);
-    animation: slide-down 5s cubic-bezier(.25,.75,.5,1.25) forwards 1;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation: slide-down 5s cubic-bezier(.32,2,.55,.27) forwards 1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-#arjun-title :nth-child(1){ animation-delay: 100ms;}
+/* #arjun-title :nth-child(1){ animation-delay: 100ms;}
 #arjun-title :nth-child(2){ animation-delay: 1000ms;}
 #arjun-title :nth-child(3){ animation-delay: 2000ms;}
 #arjun-title :nth-child(4){ animation-delay: 1000ms;}
-#arjun-title :nth-child(5){ animation-delay: 500ms;}
+#arjun-title :nth-child(5){ animation-delay: 500ms;} */
 
 @keyframes slide-down {
     0%{
@@ -30,16 +30,17 @@
     }
     50%{
         transform: translateY(-3vh);
-        transform: skew(36deg);
+        transform: skew(10deg);
     }
     60%{
         transform: translateY(-1.9vh);
+        transform: skew(-10deg);
     }
     70%{
-        transform: translateY(-1.6vh);
+        transform: translateY(-1vh);
     }
     100%{
-        transform: translateY(-0.2vh);
+        transform: translateY(-2vh);
         transform: skew(0);
     }
 }

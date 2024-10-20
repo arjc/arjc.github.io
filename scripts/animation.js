@@ -3,17 +3,28 @@
 const arjunTitleLetters = document.querySelectorAll("#arjun-title span");
 
 const animationDelays = [
-  [0.25, 1, 2, 1, 0.25],
-  [0, 0.25, 0.5, 0.75, 1],
-  [0.25, 0.5, 0.25, 0.25, 0.25],
-  [0.25, 0.5, 0.5, 0.25, 0.25],
-  [0.25, 0.5, 0.5, 0.5, 0.25],
+  [0, 0.1, 0.2, 0.1, 0],
+  [0.2, 0.1, 0, 0.1, 0.2], 
+  [0.1, 0, 0.1, 0, 0.1],
+  [0, 0.1, 0.2, 0.3, 0.4], 
+  [0.4, 0.3, 0.2, 0.1, 0], //5
+  [0.5, 0, 0.2, 0.3, 0.4],
+  [0.1, 0, 0, 0, 0],
+  [1.5, 0, 1.5, 1.5, 1.5],
+  [1.5, 1.5, 1.5, 0, 1.5],
+  [1.5, 0, 0, 1.5, 1.5], //10
+  [1, 1, 0, 0, 0],
+  [1.5, 1.5, 0, 0, 1.5],
+  [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()],
+  [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()],
+  [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()], //15
 ];
 
-selectedDelayIndex = Math.floor(Math.random() * (5 - 0));
-console.log(`#${selectedDelayIndex + 1} preset is used for ARJUN title animation`);
+selectedDelayIndex = Math.floor(Math.random() * (15 - 0));
+console.log(
+  `#${selectedDelayIndex + 1} preset is used for ARJUN title animation`
+);
 arjunTitleLetters.forEach((letter, i) => {
   let cssValue = animationDelays[selectedDelayIndex][i].toString().concat("s");
   letter.style.animationDelay = cssValue;
-
 });

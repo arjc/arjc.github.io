@@ -2,6 +2,12 @@
 
 ## UI and styles
 >I used vanila CSS with no framework including bootstrap. 
+### onload text animation (Huge fonts syaing ARJUN)
+Although its super mainstream and generic, I decided to make it from scratch, since it looked easy (it !was).
+```
+ (code to be written)
+```  
+
 ### Tilt effect
 
 ### Search bar
