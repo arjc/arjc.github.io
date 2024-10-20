@@ -17,13 +17,12 @@ const animationDelays = [
   [1.5, 1.5, 0, 0, 1.5],
   [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()],
   [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()],
-  [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()], //15
+  [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()] //15
 ];
 
-selectedDelayIndex = Math.floor(Math.random() * (15 - 0));
-console.log(
-  `#${selectedDelayIndex + 1} preset is used for ARJUN title animation`
-);
+let selectedDelayIndex = Math.floor(Math.random() * (15 - 0));
+console.log(`#${selectedDelayIndex + 1} preset is used for ARJUN title animation`);
+
 arjunTitleLetters.forEach((letter, i) => {
   let cssValue = animationDelays[selectedDelayIndex][i].toString().concat("s");
   letter.style.animationDelay = cssValue;
