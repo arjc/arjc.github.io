@@ -3,6 +3,7 @@ body {
       center / 25px 25px,
     linear-gradient(#000 calc(25px - 1px), transparent 1%) center / 25px 25px,
     #fff;
+    scroll-behavior: smooth;
 }
 
 #arjun-title {
@@ -41,14 +42,19 @@ body {
     transform: skew(10deg);
   }
   60% {
-    transform: translateY(-1.9vh);
+    transform: translateY(-2vh);
     transform: skew(-10deg);
   }
   70% {
+    transform: translateY(-1.5vh);
+  }
+  90%{
     transform: translateY(-1vh);
+    color: #fff;
   }
   100% {
-    transform: translateY(-2vh);
+    transform: translateY(-2.5vh);
     transform: skew(0);
+    color: #0ff;
   }
 }
