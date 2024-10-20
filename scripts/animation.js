@@ -12,7 +12,7 @@ const animationDelays = [
   [0.1, 0, 0, 0, 0],
   [1.5, 0, 1.5, 1.5, 1.5],
   [1.5, 1.5, 1.5, 0, 1.5],
-  [1.5, 0, 0, 1.5, 1.5], //10
+  [0, 1, 1, 0, 1], //10
   [1, 1, 0, 0, 0],
   [1.5, 1.5, 0, 0, 1.5],
   [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()],
