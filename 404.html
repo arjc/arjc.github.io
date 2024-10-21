@@ -6,12 +6,20 @@
     <link rel="stylesheet" href="css/global.css" />
     <title>Peru sheriyalla...</title>
     <style>
-      body {
+      body, html {
+        background: #fff;
+        color: #000;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         align-content: space-around;
+        transition: 1.5s all ease;
+      }
+      html :hover{
+        background: #000;
+        color: #fff;
+        text-shadow: 0 0 50px #fff;
       }
     </style>
   </head>
@@ -22,9 +30,10 @@
       you've entered the correct url
     </h2>
     <script>
-        let i = 0;
+        // Random msgs in diff langs and more (spoilers)
         const msgs = [
           "The website you are trying to look for is non existent. Please ensure that you've entered the correct URL...",
+          "Sup meh breda! yah see; di website yuh a try look fah no deh deh. Please mek sure seh yuh put inna di riyal url. One love seen?",
           "El sitio web que estás intentando buscar no existe. Asegúrate de haber ingresado la URL correcta...",
           "Le site Web que vous essayez de trouver n'existe pas. Veuillez vous assurer que vous avez entré l'URL correcte...",
           "Die Website, die Sie suchen, existiert nicht. Bitte stellen Sie sicher, dass Sie die richtige URL eingegeben haben...",
@@ -105,6 +114,7 @@
           "You should see your face rn omg 😂. We can see you through our spy camera and your face looks funnier than Xi Jinping",
           " ",
         ];
+        let i = 0;
         setInterval(() => {
           i++;
           if (i > msgs.length - 1) {
