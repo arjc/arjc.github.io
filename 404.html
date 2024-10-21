@@ -1,17 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/global.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/global.css" />
     <title>Peru sheriyalla...</title>
-</head>
-<body>
-    <h1>
-        404 error
-    </h1>
-    <h2>
-        നിങ്ങൾ തിരയാൻ ശ്രമിക്കുന്ന വെബ്സൈറ്റ് നിലവിലില്ല. നിങ്ങൾ ശരിയായ യു.ആർ.എൽ നൽകിയിട്ടുണ്ടെന്ന് ഉറപ്പാക്കുക
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="font-size: 15em">404</h1>
+    <h2 id="message" style="text-align: center">
+      The website you are trying to look for is non existent. Please ensure that
+      you've entered the correct url
     </h2>
-</body>
+    <script>
+        let i = 0;
+        const msgs = [
+          "The website you are trying to look for is non existent. Please ensure that you've entered the correct URL...",
+          "El sitio web que estás intentando buscar no existe. Asegúrate de haber ingresado la URL correcta...",
+          "Le site Web que vous essayez de trouver n'existe pas. Veuillez vous assurer que vous avez entré l'URL correcte...",
+          "Die Website, die Sie suchen, existiert nicht. Bitte stellen Sie sicher, dass Sie die richtige URL eingegeben haben...",
+          "Il sito web che stai cercando non esiste. Assicurati di aver inserito l'URL corretto...",
+          "O site que você está tentando encontrar não existe. Certifique-se de ter inserido a URL correta...",
+          "Сайт, который вы пытаетесь найти, не существует. Пожалуйста, убедитесь, что вы ввели правильный URL...",
+          "您尝试查找的网站不存在。请确保您输入了正确的 URL...",
+          "あなたが探しているウェブサイトは存在しません。正しいURLを入力したことを確認してください...", 
+          "찾고 있는 웹사이트는 존재하지 않습니다. 올바른 URL을 입력했는지 확인하세요...",
+          "الموقع الإلكتروني الذي تحاول العثور عليه غير موجود. يرجى التأكد من أنك أدخلت عنوان URL الصحيح...",
+          "जिस वेबसाइट को आप खोजने की कोशिश कर रहे हैं, वह अस्तित्व में नहीं है। कृपया सुनिश्चित करें कि आपने सही URL दर्ज किया है...",
+          "Webbplatsen du försöker hitta finns inte. Vänligen se till att du har angett den korrekta URL:en...",
+          "Verkkosivustoa, jota yrität etsiä, ei ole olemassa. Varmista, että olet syöttänyt oikean URL-osoitteen...",
+          "നിങ്ങൾ തിരയാൻ ശ്രമിക്കുന്ന വെബ്സൈറ്റ് നിലവിലില്ല. നിങ്ങൾ ശരിയായ യു.ആർ.എൽ നൽകിയിട്ടുണ്ടെന്ന് ഉറപ്പാക്കുക...",
+          "The website you are trying to look for is non existent. Please ensure that you've entered the correct URL...",
+          "El sitio web que estás intentando buscar no existe. Asegúrate de haber ingresado la URL correcta...",
+          "Le site Web que vous essayez de trouver n'existe pas. Veuillez vous assurer que vous avez entré l'URL correcte...",
+          "Die Website, die Sie suchen, existiert nicht. Bitte stellen Sie sicher, dass Sie die richtige URL eingegeben haben...",
+          "Il sito web che stai cercando non esiste. Assicurati di aver inserito l'URL corretto...",
+          "O site que você está tentando encontrar não existe. Certifique-se de ter inserido a URL correta...",
+          "Сайт, который вы пытаетесь найти, не существует. Пожалуйста, убедитесь, что вы ввели правильный URL...",
+          "您尝试查找的网站不存在。请确保您输入了正确的 URL...",
+          "あなたが探しているウェブサイトは存在しません。正しいURLを入力したことを確認してください...", 
+          "찾고 있는 웹사이트는 존재하지 않습니다. 올바른 URL을 입력했는지 확인하세요...",
+          "الموقع الإلكتروني الذي تحاول العثور عليه غير موجود. يرجى التأكد من أنك أدخلت عنوان URL الصحيح...",
+          "जिस वेबसाइट को आप खोजने की कोशिश कर रहे हैं, वह अस्तित्व में नहीं है। कृपया सुनिश्चित करें कि आपने सही URL दर्ज किया है...",
+          "Webbplatsen du försöker hitta finns inte. Vänligen se till att du har angett den korrekta URL:en...",
+          "Verkkosivustoa, jota yrität etsiä, ei ole olemassa. Varmista, että olet syöttänyt oikean URL-osoitteen...",
+          "നിങ്ങൾ തിരയാൻ ശ്രമിക്കുന്ന വെബ്സൈറ്റ് നിലവിലില്ല. നിങ്ങൾ ശരിയായ യു.ആർ.എൽ നൽകിയിട്ടുണ്ടെന്ന് ഉറപ്പാക്കുക...",
+          "Sup meh breda! yah see; di website yuh a try look fah no deh deh. Please mek sure seh yuh put inna di riyal url. One love seen?",
+          "- .... . .-- . -... ... .. - . -.-- --- ..- .- .-. . - .-. -.-- .. -. --. - --- .-.. --- --- -.- ..-. --- .-. .. ... -. --- -. . -..- .. ... - . -. - .-.-.- .--. .-.. . .- ... . . -. ... ..- .-. . - .... .- - -.-- --- ..- ...- . . -. - . .-. . -.. - .... . -.-. --- .-. .-. . -.-. - ..- .-. .-.. .-.-.-",
+          "⠞⠓⠑⠀⠺⠑⠃⠎⠊⠞⠑⠀⠽⠕⠥⠀⠁⠗⠑⠀⠞⠗⠽⠊⠝⠛⠀⠞⠕⠀⠇⠕⠕⠅⠀⠋⠕⠗⠀⠊⠎⠀⠝⠕⠝⠀⠑⠭⠊⠎⠞⠑⠝⠞⠲⠀⠏⠇⠑⠁⠎⠑⠀⠑⠝⠎⠥⠗⠑⠀⠞⠓⠁⠞⠀⠽⠕⠥'⠧⠑⠀⠑⠝⠞⠑⠗⠑⠙⠀⠞⠓⠑⠀⠉⠕⠗⠗⠑⠉⠞⠀⠥⠗⠇⠲",
+          "👆👋🌐🤟✌️👈🤟🤚✋ 👉☝️👆💪✌️👐👉✋ 👍✌️👌👉👆🤟👌✋ 🤟✌️👋👐🙋‍♂️🤚🤟☝️ 👈✋🤚🖖💁‍♂️✋🤚✋ 👍☝️👐👐👆👐👈👋 🖖👐🙋‍♂️🤟✋👈👍👇",
+          //the end?
+          "...",
+          "Why you still here?",
+          "The website aint existing!!!",
+          "The website wont start existing out of the blue if you stare long enough!",
+          "Trust me... I've tried",
+          "Oh please. I told you already",
+          "The website isn't available!!!",
+          "Hello there my name is Markplier, and the URL that you've entered doesnt seem right!",
+          "How's it going bros? My name is pewwwwwwwwwwdiepie! And today we have no website at this url.",
+          "Hey Dhar Man fam! Please remember that you have not enterted a correct URL. Peace",
+          "Hey sisters. Make sure that you slaaay with a valid url 💅",
+          "You are still here?",
+          "WOW",
+          "Dont you have like a life or something?",
+          "WHY DID YOU LEAVR THIS PAGE OPEN FOR SO LONG!!!???",
+          "Omg!",
+          "Just click one of the above links",
+          "It'll take you to YOUR website...",
+          "Wait no?",
+          "You hangin out for more time?",
+          "I mean its alr like... I'm fine with it too I guess...",
+          "But I'm just curious... like",
+          "Dont you have a family or something?",
+          "Go spend some time with them too like, I dunno...",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          "This isn't health at all you know",
+          "Reading all of these are pointlessly unnecessary",
+          "Just leave already!!!",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          "Okay you've won...",
+          "You have cleared this computer aided enrichment test!",
+          "This was all part of a data collection scheme performed by the great land of China for reasearch",
+          "All voulenteers who took part in this test was",
+          "You should see your face rn omg 😂. We can see you through our spy camera and your face looks funnier than Xi Jinping",
+          " ",
+        ];
+        setInterval(() => {
+          i++;
+          if (i > msgs.length - 1) {
+            i = 0;
+          }
+          document.querySelector("#message").textContent = msgs[i];
+        }, 5000);
+    </script>
+  </body>
 </html>
